@@ -24,6 +24,7 @@
   }
 
   /* Layout for About + Photo side by side */
+  
   #about, #student-photo {
     display: inline-block;
     vertical-align: top;
@@ -35,6 +36,7 @@
   }
 
   /* Course Section Layout */
+
   #courses {
     margin-top: 2rem;
   }
