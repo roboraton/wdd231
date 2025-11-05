@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WDD 131 - Dynamic Web Fundamentals - Hector Gomez</title>
+  <meta name="description" content="Portfolio home page for WDD 131 Dynamic Web Fundamentals, including course info and links to projects by Hector Gomez.">
+  <meta name="author" content="Hector Gomez" />
+  <meta name="keywords" content="WDD131, Web Development, Portfolio, BYU-Idaho, Hector Gomez" />
+
+  <!-- Normalize and Custom Styles -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="scripts/nav.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
 </head>
+
 <body>
-    
+  <header>
+    <div class="logo-title">
+      <img src="images/logo.svg" alt="Site Logo">
+      <span>Hector Gomez</span>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle Navigation">&#9776;</button>
+    <nav id="nav-menu">
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">Chamber Project</a></li>
+        <li><a href="#">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam amet nulla explicabo, ad
+        dicta doloribus voluptate! Qui ipsum veniam voluptatum quibusdam ut in excepturi vero.
+      </p>
+    </section>
+
+    <section id="student-photo">
+      <h2>Student Photo</h2>
+      <img src="images/profile.jpg" alt="Photo of Hector Gomez" loading="lazy">
+    </section>
+
+    <section id="courses">
+      <h2>Web Certificate Courses</h2>
+      <div class="filter-buttons">
+        <button id="all">All</button>
+        <button id="cse">CSE</button>
+        <button id="wdd">WDD</button>
+      </div>
+      <div id="course-cards"></div>
+      <p id="total-credits"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://github.com/roboraton/wdd231" target="_blank" aria-label="GitHub">
+        <img src="images/github.svg" alt="GitHub logo">
+      </a>
+      <a href="https://linkedin.com/in/inghigg" target="_blank" aria-label="LinkedIn">
+        <img src="images/linkedin.svg" alt="LinkedIn logo">
+      </a>
+      <a href="https://youtube.com/@roboraton" target="_blank" aria-label="YouTube">
+        <img src="images/youtube.svg" alt="YouTube logo">
+      </a>
+    </div>
+
+    <p>
+      &copy; <span id="currentyear"></span> | Hector Gomez | Mexico
+    </p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
