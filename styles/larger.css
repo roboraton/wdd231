@@ -1,4 +1,9 @@
 @media screen and (min-width: 768px) {
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
   header {
     justify-content: space-between;
     padding: 1rem 2rem;
@@ -18,13 +23,6 @@
     padding: 0.75rem 1rem;
   }
 
-  main {
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  /* Layout for About + Photo side by side */
-  
   #about, #student-photo {
     display: inline-block;
     vertical-align: top;
@@ -32,10 +30,9 @@
   }
 
   #student-photo img {
-    max-width: 100%;
+    max-width: 50%;
+    margin-left: 7.5rem;
   }
-
-  /* Course Section Layout */
 
   #courses {
     margin-top: 2rem;
