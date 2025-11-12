@@ -3,12 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WDD 231 - Frontend Development I - Hector Gomez</title>
-  <meta name="description" content="Portfolio home page for WDD 231 Web Frontend Development I, with responsive design, SEO tested and audited.">
-  <meta name="author" content="Hector Gomez" />
-  <meta name="keywords" content="WDD131, Frontend Development I, Course Home Page, BYU-Idaho, Hector Gomez" />
 
-  <!-- Normalize and Custom Styles -->
+  <title>Chamber of Commerce — Directory | WDD 231 · Hector Gomez</title>
+  <meta name="description" content="Chamber of Commerce directory page for WDD 231. Responsive layout with grid/list toggle and SEO-ready metadata.">
+  <meta name="author" content="Hector Gomez" />
+  <meta name="keywords" content="WDD231, Frontend Development I, Chamber of Commerce, Directory, BYU-Idaho, Hector Gomez" />
+
+  <!-- Open Graph (Facebook) -->
+  <meta property="og:title" content="Chamber of Commerce — Member Directory" />
+  <meta property="og:description" content="Explore the chamber member directory with grid/list views." />
+  <meta property="og:type" content="website" />
+
+  <meta property="og:url" content="https://roboraton.github.io/wdd231/chamber/directory.html" />
+  <meta property="og:image" content="https://roboraton.github.io/wdd231/chamber/images/og-directory.jpg" />
+  <meta property="og:site_name" content="Chamber of Commerce" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+
+  <!-- Normalize + CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
@@ -16,10 +29,63 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
 
-  <!-- Scripts -->                                         <!--TO complete and addapt-->
+  <!-- Scripts -->
   <script src="scripts/nav.js" defer></script>
   <script src="scripts/date.js" defer></script>
-  <script src="scripts/courses.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
 </head>
+
+<body>
+  <header>
+    <div class="branding">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo-chamber.svg" alt="Chamber logo" class="logo" />
+      </a>
+      <div class="titles">
+        <h1>Chamber of Commerce</h1>
+        <p class="tagline">Member Directory</p>
+      </div>
+    </div>
+    
+    <!--&#9776; is the hamburguer (☰) button -->
+    <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button> 
+
+    <nav id="primary-nav" class="nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" aria-current="page">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="directory-controls" aria-label="View options">
+      <div class="view-toggle" role="group" aria-label="Toggle view">
+        <button id="gridBtn" class="active" aria-pressed="true">Grid</button>
+        <button id="listBtn" aria-pressed="false">List</button>
+      </div>
+    </section>
+
+    <section id="members" class="directory grid-view" aria-live="polite">
+      <!-- Here the data/members.json goes -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="contact">
+      <p><strong>Chamber of Commerce</strong></p>
+      <p>Address: 123 Main St, Puebla, MX</p>
+      <p>Phone: +52 222 000 0000 · Email: info@chamber.example</p>
+    </div>
+
+    <div class="meta">
+      <p>&copy; <span id="currentYear"></span> Hector Gomez · WDD 231</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

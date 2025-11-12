@@ -1,20 +1,67 @@
 {
-
-    "name": "Grupo Carso",
-    "address": "Main street 123",
-    "phone numbers": 555154651,
-    "website URL" : "www.carso.com"
-    image or icon file names 
-    membership level (1=member, 2=silver, 3=gold)
-    "other information": "#"
-
-    
-    "name": "Grupo Bimbo",
-    "address": "Main street 123",
-    "phone numbers": 555154651,
-    "website URL" : "www.carso.com"
-    image or icon file names 
-    membership level (1=member, 2=silver, 3=gold)
-    "other information": "#"
-
+  "members": [
+    {
+      "name": "TecnoPuebla Solutions",
+      "address": "Av. Reforma 145, Col. Centro, Puebla, PUE",
+      "phone": "+52 222 555 0123",
+      "website": "https://www.tecnopuebla.mx",
+      "image": "tecnopuebla.png",
+      "membership": 3,
+      "description": "Technology consultancy specializing in industrial automation and web development."
+    },
+    {
+      "name": "Café Sierra Azul",
+      "address": "Calle Juárez 89, Zacatlán, PUE",
+      "phone": "+52 797 456 8844",
+      "website": "https://www.cafesierraazul.com",
+      "image": "cafesierraazul.png",
+      "membership": 2,
+      "description": "Producers of 100% Poblano artisanal coffee with a sustainable focus."
+    },
+    {
+      "name": "Grupo Olivares Constructora",
+      "address": "Blvd. Atlixco 230, Col. Las Ánimas, Puebla, PUE",
+      "phone": "+52 222 789 2211",
+      "website": "https://www.grupoolivares.mx",
+      "image": "grupoolivares.png",
+      "membership": 3,
+      "description": "Leading company in construction and sustainable architectural design."
+    },
+    {
+      "name": "Dulces La Tradición",
+      "address": "Calle 6 Oriente 120, Puebla, PUE",
+      "phone": "+52 222 333 9000",
+      "website": "https://www.dulceslatradicion.com",
+      "image": "dulceslatradicion.png",
+      "membership": 1,
+      "description": "Factory of traditional Poblano sweets with over 40 years of history."
+    },
+    {
+      "name": "AutoCheck Express",
+      "address": "Av. 11 Sur 3410, Col. El Carmen, Puebla, PUE",
+      "phone": "+52 222 222 5511",
+      "website": "https://www.autocheckexpress.mx",
+      "image": "autocheckexpress.png",
+      "membership": 2,
+      "description": "Vehicle diagnostic center with environmental certification and fast service."
+    },
+    {
+      "name": "Hotel Los Arcos",
+      "address": "Carretera Federal 190 km 45, Cholula, PUE",
+      "phone": "+52 222 888 4321",
+      "website": "https://www.hotellosarcos.mx",
+      "image": "hotellosarcos.png",
+      "membership": 1,
+      "description": "Family boutique hotel with views of the volcanoes and typical breakfast included."
+    },
+    {
+      "name": "BioVerde Energía",
+      "address": "Parque Industrial FINSA, Puebla, PUE",
+      "phone": "+52 222 667 7711",
+      "website": "https://www.bioverdeenergia.com",
+      "image": "bioverdeenergia.png",
+      "membership": 3,
+      "description": "Renewable energy company dedicated to the development of solar and wind projects."
+    }
+  ]
 }

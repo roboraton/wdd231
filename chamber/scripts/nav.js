@@ -1,7 +1,8 @@
-const menuButton = document.getElementById("menu-toggle");
-const navMenu = document.getElementById("nav-menu");
+const navButton = document.getElementById("nav-toggle");
+const navMenu = document.getElementById("primary-nav");
 
-menuButton.addEventListener("click", () => {
-  navMenu.classList.toggle("open");
-  menuButton.classList.toggle("open");
+navButton.addEventListener("click", () => {
+  const expanded = navButton.getAttribute("aria-expanded") === "true" || false;
+  navButton.setAttribute("aria-expanded", !expanded);
+  navMenu.classList.toggle("show");
 });
