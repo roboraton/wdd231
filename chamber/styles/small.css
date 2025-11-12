@@ -87,7 +87,7 @@ main {
 }
 
 .grid-view {
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .list-view {
@@ -123,4 +123,30 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  word-break: break-word;
+  min-width: 200px;
+}
+
+.member-card h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.member-card p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.member-card a {
+  margin-top: 0.25rem;
+  font-weight: 600;
 }
