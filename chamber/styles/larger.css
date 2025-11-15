@@ -1,5 +1,6 @@
 @media screen and (min-width: 700px) {
 
+  /* ---------- Header ---------- */
   header {
     display: flex;
     justify-content: space-between;
@@ -28,7 +29,7 @@
     padding: 0.5rem 1rem;
   }
 
-  /* Directory grid */
+  /* ---------- Directory grid ---------- */
   .grid-view {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
@@ -45,6 +46,7 @@
     height: 120px;
   }
 
+  /* ---------- Footer ---------- */
   footer {
     display: flex;
     justify-content: space-between;
