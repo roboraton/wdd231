@@ -181,26 +181,28 @@ main {
 
 .hero-content {
   position: absolute;
-  inset: 0;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  color: #fff;
+  top: 1rem;
+  right: 1rem;
+  max-width: 260px;
   padding: 1rem;
-  background-color: #000;
-  background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.70));
-  background-blend-mode: multiply;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  color: #fff;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-.hero .cta {
+.hero-content .cta {
   display: inline-block;
-  margin-top: .5rem;
-  background: #C6A74E;
-  color: #122;
-  padding: .5rem 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 700;
+  margin-top: .75rem;
+  background:#C6A74E;
+  color:#122;
+  padding:.5rem 1rem;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:700;
 }
 
 /* ---------- Weather ---------- */
