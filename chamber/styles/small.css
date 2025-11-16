@@ -69,12 +69,13 @@ nav a[aria-current="page"] {
   cursor: pointer;
 }
 
-/* ---------- Directory ---------- */
+/* ---------- Main ---------- */
 main {
   flex: 1;
   padding: 1rem;
 }
 
+/* ---------- Directory ---------- */
 .directory-controls {
   display: flex;
   justify-content: center;
@@ -94,7 +95,6 @@ main {
   color: white;
 }
 
-/* --- Members grid & cards --- */
 #members {
   display: grid;
   gap: 1rem;
@@ -143,7 +143,7 @@ main {
   text-decoration: none;
 }
 
-/* --- List view --- */
+/* List view */
 .list-view {
   display: flex;
   flex-direction: column;
@@ -165,43 +165,43 @@ main {
   margin: 0;
 }
 
-/* ---------- Footer ---------- */
-footer {
-  background-color: #123456;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+/* ---------- Hero (Index) ---------- */
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
+.hero img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
 
-/* ---------INDEX-------------*/
-
-/* Hero */
-.hero { position: relative; overflow: hidden; border-radius: 8px; }
-.hero img { width: 100%; height: 220px; object-fit: cover; display:block; }
 .hero-content {
-  position: absolute; inset: 0; display: grid; place-content: center;
-  text-align: center; color: #fff; padding: 1rem;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 1rem;
   background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.35));
 }
+
 .hero .cta {
-  display: inline-block; margin-top: .5rem; background:#C6A74E; color:#122;
-  padding:.5rem 1rem; border-radius:6px; text-decoration:none; font-weight:700;
+  display: inline-block;
+  margin-top: .5rem;
+  background: #C6A74E;
+  color: #122;
+  padding: .5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 700;
 }
 
-/* Weather */
-.weather { margin-top: 1.25rem; }
-.weather-now { font-size:1.1rem; margin-bottom:.5rem; }
-.forecast { display:grid; grid-template-columns: repeat(3, 1fr); gap:.5rem; }
-.forecast-card { background:#fff; border:1px solid #ddd; border-radius:8px; padding:.5rem; text-align:center; }
-.forecast-card .day { font-weight:700; }
-
-/* Spotlights */
-.spotlights { margin-top: 1.25rem; }
-.spotlights #spotlight-grid { display:grid; gap:1rem; grid-template-columns: 1fr; }
-.spotlight-card img { width:90px; height:90px; }
-
+/* ---------- Weather ---------- */
 .weather {
   margin-top: 1.5rem;
 }
@@ -233,6 +233,7 @@ footer {
   font-weight: 600;
 }
 
+/* ---------- Spotlights ---------- */
 .spotlights {
   margin-top: 1.5rem;
 }
@@ -261,4 +262,13 @@ footer {
   color: #0f2c56;
   text-decoration: none;
   font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #123456;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
 }

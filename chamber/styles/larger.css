@@ -54,10 +54,14 @@
     padding: 1rem 2rem;
   }
 
-  /*-----------INDEX-----------*/
-    .hero img { height: 360px; }
-  .spotlights #spotlight-grid { grid-template-columns: repeat(3, minmax(220px,1fr)); }
+  /* ---------- INDEX ---------- */
 
+  /* Hero */
+  .hero img {
+    height: 360px;
+  }
+
+  /* Weather */
   .weather-now {
     flex-direction: row;
     justify-content: center;
@@ -68,8 +72,11 @@
     grid-template-columns: repeat(3, minmax(120px, 1fr));
   }
 
+  /* Spotlights */
   .spotlight-grid {
+    display: grid;
     grid-template-columns: repeat(3, minmax(240px, 1fr));
+    gap: 1rem;
   }
 
   .spotlight-card {
