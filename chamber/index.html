@@ -3,20 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chamber of Commerce — Home</title>
-  <meta name="description" content="Chamber home page with hero, CTA, events, weather, and member spotlights.">
-  <link rel="icon" href="favicon.ico">
+
+  <title>Chamber of Commerce — Home Page | WDD 231 · Hector Gomez</title>
+  <meta name="description" content="Chamber of Commerce homepage for WDD 231. Featuring local business spotlights, current events, real-time weather, and resources for community growth.">
+  <meta name="author" content="Hector Gomez" />
+  <meta name="keywords" content="WDD231, Frontend Development I, Chamber of Commerce, Home Page, BYU-Idaho, Hector Gomez" />
+
+  <!-- Open Graph (Facebook) -->
+  <meta property="og:title" content="Chamber of Commerce — Home Page" />
+  <meta property="og:description" content="Discover local businesses, events, and real-time weather updates with our Chamber of Commerce" />
+  <meta property="og:type" content="website" />
+
+  <meta property="og:url" content="https://roboraton.github.io/wdd231/chamber/index.html" />
+  <meta property="og:image" content="https://roboraton.github.io/wdd231/chamber/images/hero.jpg" />
+  <meta property="og:site_name" content="Chamber of Commerce" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+
+  <!-- Normalize + CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Scripts -->
   <script src="scripts/nav.js" defer></script>
   <script src="scripts/date.js" defer></script>
   <script src="scripts/weather.js" defer></script>
-  <script src="scripts/spotlights.js" defer></script>
 </head>
+
 <body>
   <header>
     <div class="branding">
@@ -66,7 +86,7 @@
     <h2>Weather</h2>
 
     <div class="weather-now">
-        <img id="weather-icon" src="" alt="">
+        <img id="weather-icon" src="data:image/gif;base64,R0lGODlhAQABAAAAACw=" alt="Weather icon">
         <p id="current-temp">--°C</p>
         <p id="weather-desc"></p>
     </div>

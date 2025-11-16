@@ -5,7 +5,7 @@ const forecastContainer = document.querySelector("#forecast");
 
 const LAT = 19.0433;
 const LON = -98.2019;
-const API_KEY = "TU_API_KEY";
+const API_KEY = "0cb01a9c919ecf490fff31aa614aeca8";
 
 const weatherURL =
   `https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&units=metric&lang=en&appid=${API_KEY}`;
