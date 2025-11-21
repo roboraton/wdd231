@@ -5,7 +5,7 @@
       "address": "Av. Reforma 145, Col. Centro, Puebla, PUE",
       "phone": "+52 222 555 0123",
       "website": "https://www.tecnopuebla.mx",
-      "image": "https://placehold.co/150x150?text=TecnoPuebla",
+      "image": "tecnopuebla.jpg",
       "membership": 3,
       "description": "Technology consultancy specializing in industrial automation and web development."
     },
@@ -14,7 +14,7 @@
       "address": "Calle Juárez 89, Zacatlán, PUE",
       "phone": "+52 797 456 8844",
       "website": "https://www.cafesierraazul.com",
-      "image": "https://placehold.co/150x150?text=Café+Sierra+Azul",
+      "image": "sierraazul.jpg",
       "membership": 2,
       "description": "Producers of 100% Poblano artisanal coffee with a sustainable focus."
     },
@@ -23,7 +23,7 @@
       "address": "Blvd. Atlixco 230, Col. Las Ánimas, Puebla, PUE",
       "phone": "+52 222 789 2211",
       "website": "https://www.grupoolivares.mx",
-      "image": "https://placehold.co/150x150?text=Grupo+Olivares",
+      "image": "olivares.jpg",
       "membership": 3,
       "description": "Leading company in construction and sustainable architectural design."
     },
@@ -32,7 +32,7 @@
       "address": "Calle 6 Oriente 120, Puebla, PUE",
       "phone": "+52 222 333 9000",
       "website": "https://www.dulceslatradicion.com",
-      "image": "https://placehold.co/150x150?text=Dulces+La+Tradición",
+      "image": "tradicion.jpg",
       "membership": 1,
       "description": "Factory of traditional Poblano sweets with over 40 years of history."
     },
@@ -41,7 +41,7 @@
       "address": "Av. 11 Sur 3410, Col. El Carmen, Puebla, PUE",
       "phone": "+52 222 222 5511",
       "website": "https://www.autocheckexpress.mx",
-      "image": "https://placehold.co/150x150?text=AutoCheck+Express",
+      "image": "autocheck.jpg",
       "membership": 2,
       "description": "Vehicle diagnostic center with environmental certification and fast service."
     },
@@ -50,7 +50,7 @@
       "address": "Carretera Federal 190 km 45, Cholula, PUE",
       "phone": "+52 222 888 4321",
       "website": "https://www.hotellosarcos.mx",
-      "image": "https://placehold.co/150x150?text=Hotel+Los+Arcos",
+      "image": "losarcos.jpg",
       "membership": 1,
       "description": "Family boutique hotel with views of the volcanoes and typical breakfast included."
     },
@@ -59,7 +59,7 @@
       "address": "Parque Industrial FINSA, Puebla, PUE",
       "phone": "+52 222 667 7711",
       "website": "https://www.bioverdeenergia.com",
-      "image": "https://placehold.co/150x150?text=BioVerde+Energía",
+      "image": "bioverde.jpg",
       "membership": 3,
       "description": "Renewable energy company dedicated to the development of solar and wind projects."
     }

@@ -9,8 +9,9 @@ async function loadSpotlights() {
       const j = Math.floor(Math.random() * (i + 1));
       [premium[i], premium[j]] = [premium[j], premium[i]];
     }
+    const count = Math.random() < 0.5 ? 2 : 3;
+    const picks = premium.slice(0, count);
 
-    const picks = premium.slice(0, 3);
     const grid = document.getElementById("spotlight-grid");
     grid.innerHTML = "";
 
@@ -18,7 +19,7 @@ async function loadSpotlights() {
       const card = document.createElement("div");
       card.classList.add("spotlight-card");
       card.innerHTML = `
-        <img src="${m.image}" alt="${m.name} logo" loading="lazy">
+        <img src="images/${m.image}" alt="${m.name} logo" loading="lazy">
         <h3>${m.name}</h3>
         <p>${m.address}</p>
         <p>${m.phone}</p>
