@@ -206,9 +206,7 @@ main {
 }
 
 /* ---------- Weather ---------- */
-.weather {
-  margin-top: 1.5rem;
-}
+.weather { margin-top: 1.5rem; }
 
 .weather-now {
   display: flex;
@@ -238,9 +236,7 @@ main {
 }
 
 /* ---------- Spotlights ---------- */
-.spotlights {
-  margin-top: 1.5rem;
-}
+.spotlights { margin-top: 1.5rem; }
 
 .spotlight-grid {
   display: grid;
@@ -275,4 +271,221 @@ footer {
   text-align: center;
   padding: 1rem;
   font-size: 0.9rem;
+}
+
+/* ---------- Membership Cards Animation ---------- */
+.membership-levels {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.level-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: card-enter 0.8s ease-out forwards;
+}
+
+.level-card:nth-child(1) { animation-delay: 0.1s; }
+.level-card:nth-child(2) { animation-delay: 0.25s; }
+.level-card:nth-child(3) { animation-delay: 0.4s; }
+.level-card:nth-child(4) { animation-delay: 0.55s; }
+
+@keyframes card-enter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.level-card a {
+  display: inline-block;
+  margin-top: .5rem;
+  color: #0f2c56;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.level-card:hover {
+  background: #f0f6ff;
+  transition: background 0.3s;
+}
+
+/* ---------- Join Page ---------- */
+.join-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  gap: 2rem;
+}
+
+/* Form */
+.join-form-section h2 {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.join-form-section form {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: grid;
+  gap: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.join-form-section label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.join-form-section input,
+.join-form-section select,
+.join-form-section textarea {
+  margin-top: .3rem;
+  padding: .6rem;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+}
+
+.submit-btn {
+  margin-top: .5rem;
+  padding: .75rem;
+  background: #123456;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #0f2c56;
+}
+
+/* Membership cards (non-animated fallback styling) */
+.level-card {
+  transition: transform .2s;
+}
+
+.level-card:hover {
+  transform: scale(1.03);
+}
+
+/* Modals */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  max-width: 380px;
+  width: 90%;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+.close-modal {
+  margin-top: 1rem;
+  background: #123456;
+  color: #fff;
+  border: none;
+  padding: .5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* ---------- Thank You Page ---------- */
+.thankyou {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.thankyou h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #123456;
+}
+
+.thankyou p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.thankyou .results {
+  margin-top: 1.5rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.thankyou .results p {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.thankyou .results strong {
+  color: #0f2c56;
+}
+
+/* Entrance animation */
+.thankyou .results {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Thank you button */
+.back-home {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #123456;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.back-home:hover {
+  background: #0f2c56;
+  transform: translateY(-2px);
 }

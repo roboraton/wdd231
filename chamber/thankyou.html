@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Thank You | Chamber of Commerce</title>
+  <meta name="description" content="Thank you page for chamber membership application.">
+  <meta name="author" content="Hector Gomez">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- JS -->
+  <script src="scripts/nav.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+
+  <script defer>
+    const params = new URLSearchParams(window.location.search);
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const fill = (id, field) => {
+        document.getElementById(id).textContent = params.get(field) || "";
+      };
+
+      fill("fname", "fname");
+      fill("lname", "lname");
+      fill("email", "email");
+      fill("phone", "phone");
+      fill("organization", "organization");
+      fill("timestamp", "timestamp");
+    });
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="branding">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo-chamber.svg" alt="Chamber logo" class="logo" />
+      </a>
+      <div class="titles">
+        <h1>Chamber of Commerce</h1>
+        <p class="tagline">Welcome to our business community</p>
+      </div>
+    </div>
+
+    <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+
+    <nav id="primary-nav" class="nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="thankyou" style="max-width: 900px; margin: 2rem auto; text-align:center;">
+    <h2 style="font-family: 'Oswald', sans-serif; margin-bottom: 1rem;">Thank You!</h2>
+    <p>Your application has been submitted successfully.</p>
+
+    <div class="results" style="margin-top: 2rem; text-align:left; background:white; padding:1.5rem; border-radius:10px; border:1px solid #ddd;">
+      <p><strong>First Name:</strong> <span id="fname"></span></p>
+      <p><strong>Last Name:</strong> <span id="lname"></span></p>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <p><strong>Mobile:</strong> <span id="phone"></span></p>
+      <p><strong>Organization:</strong> <span id="organization"></span></p>
+      <p><strong>Submitted:</strong> <span id="timestamp"></span></p>
+    </div>
+
+    <a href="index.html" class="back-home">← Return to Home</a>
+
+  </main>
+
+  <footer>
+    <div class="contact">
+      <p><strong>Chamber of Commerce</strong></p>
+      <p>Address: 123 Main St, Puebla, MX · Phone: +52 222 000 0000</p>
+    </div>
+
+    <div class="meta">
+      <p>&copy; <span id="currentYear"></span> Hector Gomez · WDD 231</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+</body>
+</html>

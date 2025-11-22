@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Chamber of Commerce — Join Page | WDD 231 · Hector Gomez</title>
+  <meta name="description" content="Chamber of Commerce join page for WDD 231. Featuring local business spotlights, current events, real-time weather, and resources for community growth.">
+  <meta name="author" content="Hector Gomez" />
+  <meta name="keywords" content="WDD231, Frontend Development I, Chamber of Commerce, Join Page, BYU-Idaho, Hector Gomez" />
+
+  <!-- Open Graph (Facebook) -->
+  <meta property="og:title" content="Chamber of Commerce — Join Page" />
+  <meta property="og:description" content="Discover local businesses, events, and real-time weather updates with our Chamber of Commerce" />
+  <meta property="og:type" content="website" />
+
+  <meta property="og:url" content="https://roboraton.github.io/wdd231/chamber/join.html" />
+  <meta property="og:image" content="https://roboraton.github.io/wdd231/chamber/images/hero.jpg" />
+  <meta property="og:site_name" content="Chamber of Commerce" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+
+  <!-- Normalize + CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="scripts/nav.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/join.js" defer></script>
+
+</head>
+
+<body>
+  <header>
+    <div class="branding">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo-chamber.svg" alt="Chamber logo" class="logo" />
+      </a>
+      <div class="titles">
+        <h1>Chamber of Commerce</h1>
+        <p class="tagline">Welcome to our business community</p>
+      </div>
+    </div>
+
+    <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+
+    <nav id="primary-nav" class="nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <main class="join-page">
+      
+      <section class="join-form-section">
+        <h2>Membership Application</h2>
+
+        <form method="get" action="thankyou.html">
+          
+          <label>
+            First Name
+            <input type="text" name="fname" required autocomplete="given-name" title="Enter your first name">
+          </label>
+
+          <label>
+            Last Name
+            <input type="text" name="lname" required autocomplete="family-name" title="Enter your last name">
+          </label>
+
+          <label>
+            Organizational Title
+            <input type="text" name="title" autocomplete="organization-title" 
+                  pattern="[A-Za-z\s\-]{7,}" 
+                  title="Only letters, hyphens and spaces. Min 7 characters.">
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" required autocomplete="email" 
+                  placeholder="example@email.com"
+                  title="Enter a valid email address">
+          </label>
+
+          <label>
+            Mobile Phone
+            <input type="tel" name="phone" required autocomplete="tel" title="Enter your mobile number">
+          </label>
+
+          <label>
+            Organization Name
+            <input type="text" name="organization" required autocomplete="organization" 
+                  title="Enter the name of the business/organization">
+          </label>
+
+          <label>
+            Membership Level
+            <select name="membership" required title="Select a membership level">
+              <option value="np">NP Membership</option>
+              <option value="bronze">Bronze</option>
+              <option value="silver">Silver</option>
+              <option value="gold">Gold</option>
+            </select>
+          </label>
+
+          <label>
+            Business Description
+            <textarea name="description" rows="4" title="Describe your business"></textarea>
+          </label>
+
+          <input type="hidden" id="timestamp" name="timestamp">
+
+          <input type="submit" value="Submit Application" class="submit-btn">
+        </form>
+      </section>
+
+      <section class="membership-levels">
+        <div class="level-card" data-modal="modal-np">
+          <h3>NP Membership</h3>
+          <a href="#">View Benefits</a>
+        </div>
+
+        <div class="level-card" data-modal="modal-bronze">
+          <h3>Bronze Membership</h3>
+          <a href="#">View Benefits</a>
+        </div>
+
+        <div class="level-card" data-modal="modal-silver">
+          <h3>Silver Membership</h3>
+          <a href="#">View Benefits</a>
+        </div>
+
+        <div class="level-card" data-modal="modal-gold">
+          <h3>Gold Membership</h3>
+          <a href="#">View Benefits</a>
+        </div>
+      </section>
+
+      <!-- Modals -->
+      <div id="modal-np" class="modal">
+        <div class="modal-box">
+          <h3>NP Membership Benefits</h3>
+          <p>No fees, access to community events, nonprofit training, and support.</p>
+          <button class="close-modal">Close</button>
+        </div>
+      </div>
+
+      <div id="modal-bronze" class="modal">
+        <div class="modal-box">
+          <h3>Bronze Benefits</h3>
+          <p>Business listing, event access, networking tools.</p>
+          <button class="close-modal">Close</button>
+        </div>
+      </div>
+
+      <div id="modal-silver" class="modal">
+        <div class="modal-box">
+          <h3>Silver Benefits</h3>
+          <p>All Bronze benefits plus small advertising boosts and discounts.</p>
+          <button class="close-modal">Close</button>
+        </div>
+      </div>
+
+      <div id="modal-gold" class="modal">
+        <div class="modal-box">
+          <h3>Gold Benefits</h3>
+          <p>Premium exposure, spotlight ads, early event access, VIP support.</p>
+          <button class="close-modal">Close</button>
+        </div>
+      </div>
+
+    </main>
+
+  <footer>
+    <div class="contact">
+      <p><strong>Chamber of Commerce</strong></p>
+      <p>Address: 123 Main St, Puebla, MX · Phone: +52 222 000 0000</p>
+    </div>
+    <div class="meta">
+      <p>&copy; <span id="currentYear"></span> Hector Gomez · WDD 231</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>
