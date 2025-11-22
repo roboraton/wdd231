@@ -143,7 +143,7 @@ main {
   text-decoration: none;
 }
 
-/* List view */
+/* ---------- List view ---------- */
 .list-view {
   display: flex;
   flex-direction: column;
@@ -273,13 +273,15 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ---------- Membership Cards Animation ---------- */
+/* ---------- Membership Cards (unified, clean) ---------- */
+
 .membership-levels {
   display: grid;
   gap: 1rem;
   margin-top: 1.5rem;
 }
 
+/* Unified base card */
 .level-card {
   background: #fff;
   border: 1px solid #ddd;
@@ -290,8 +292,16 @@ footer {
   opacity: 0;
   transform: translateY(20px);
   animation: card-enter 0.8s ease-out forwards;
+  transition: transform .2s, background .3s;
 }
 
+/* Hover */
+.level-card:hover {
+  transform: scale(1.03);
+  background: #f0f6ff;
+}
+
+/* Animation staging */
 .level-card:nth-child(1) { animation-delay: 0.1s; }
 .level-card:nth-child(2) { animation-delay: 0.25s; }
 .level-card:nth-child(3) { animation-delay: 0.4s; }
@@ -310,11 +320,6 @@ footer {
   color: #0f2c56;
   font-weight: 600;
   text-decoration: none;
-}
-
-.level-card:hover {
-  background: #f0f6ff;
-  transition: background 0.3s;
 }
 
 /* ---------- Join Page ---------- */
@@ -375,16 +380,7 @@ footer {
   background: #0f2c56;
 }
 
-/* Membership cards (non-animated fallback styling) */
-.level-card {
-  transition: transform .2s;
-}
-
-.level-card:hover {
-  transform: scale(1.03);
-}
-
-/* Modals */
+/* ---------- Modals ---------- */
 .modal {
   display: none;
   position: fixed;
@@ -394,6 +390,7 @@ footer {
   justify-content: center;
   align-items: center;
   z-index: 999;
+  color: transparent;
 }
 
 .modal.show {
@@ -407,6 +404,10 @@ footer {
   max-width: 380px;
   width: 90%;
   box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+
+.modal .modal-box {
+  color: #222;
 }
 
 .close-modal {
@@ -439,6 +440,7 @@ footer {
   margin-bottom: 1rem;
 }
 
+/* unified results box */
 .thankyou .results {
   margin-top: 1.5rem;
   background: #fff;
@@ -447,6 +449,9 @@ footer {
   border-radius: 10px;
   text-align: left;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUp 0.6s ease-out forwards;
 }
 
 .thankyou .results p {
@@ -458,13 +463,6 @@ footer {
   color: #0f2c56;
 }
 
-/* Entrance animation */
-.thankyou .results {
-  opacity: 0;
-  transform: translateY(15px);
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -472,7 +470,6 @@ footer {
   }
 }
 
-/* Thank you button */
 .back-home {
   display: inline-block;
   margin-top: 1.5rem;
