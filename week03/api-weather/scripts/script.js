@@ -66,6 +66,4 @@ function displayResults(data) {
   // data.main.temp → número en °C
   // ------------------------------------------
   currentTemp.innerHTML = `${data.main.temp}&deg;C`;
-
-
-  // -------------------------------
+}
