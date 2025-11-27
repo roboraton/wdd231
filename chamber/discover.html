@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Chamber of Commerce — Discover | WDD 231 · Hector Gomez</title>
+  <meta name="description" content="Discover key locations, culture, and highlights from the Puebla area through the Chamber of Commerce discover page.">
+  <meta name="author" content="Hector Gomez" />
+  <meta name="keywords" content="WDD231, Frontend Development I, Chamber of Commerce, Discover Page, Puebla, BYU-Idaho, Hector Gomez" />
+
+  <!-- Open Graph (Facebook) -->
+  <meta property="og:title" content="Chamber of Commerce — Discover Page" />
+  <meta property="og:description" content="Explore landmarks, culture, and opportunities around Puebla through the Chamber discover page." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://roboraton.github.io/wdd231/chamber/discover.html" />
+  <meta property="og:image" content="https://roboraton.github.io/wdd231/chamber/images/hero.jpg" />
+  <meta property="og:site_name" content="Chamber of Commerce" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" sizes="any">
+
+  <!-- Normalize + CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="scripts/nav.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script type="module" src="scripts/discover.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <div class="branding">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo-chamber.svg" alt="Chamber logo" class="logo" />
+      </a>
+      <div class="titles">
+        <h1>Chamber of Commerce</h1>
+        <p class="tagline">Welcome to our business community</p>
+      </div>
+    </div>
+
+    <button id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+
+    <nav id="primary-nav" class="nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html" aria-current="page">Discover</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+<main class="discover-page">
+
+  <section class="intro">
+    <h2>Discover Puebla</h2>
+    <p>Explore some of the most representative locations, culture, and experiences around Puebla — a mix of history, art, food, and modern life that makes the region a great place to live and do business.</p>
+  </section>
+
+  <!-- Aquí aparecerá el mensaje de visitas -->
+  <section id="visit-message" class="visit-message"></section>
+
+  <!-- Aquí se insertan las 8 cards -->
+  <section id="discover-grid" class="discover-grid"></section>
+
+</main>
+
+  <footer>
+    <div class="contact">
+      <p><strong>Chamber of Commerce</strong></p>
+      <p>Address: 123 Main St, Puebla, MX · Phone: +52 222 000 0000</p>
+    </div>
+    <div class="meta">
+      <p>&copy; <span id="currentYear"></span> Hector Gomez · WDD 231</p>
+      <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

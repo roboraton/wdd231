@@ -59,4 +59,32 @@
   footer {
     font-size: 0.9rem;
   }
+
+  /* Large screens (1025px and above) for Discover */
+
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "a b c d"
+      "e f g h";
+  }
+
+  /* Hover effects only on larger viewports */
+  .place-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+
+  .place-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  }
+
+  .place-card img {
+    transition: filter 0.25s ease;
+  }
+
+  .place-card img:hover {
+    filter: brightness(1.05) contrast(1.05);
+  }
 }
+
