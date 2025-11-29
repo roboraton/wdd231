@@ -1,51 +1,50 @@
-import { places } from "../data/discoverData.mjs";
+// scripts/discover.js
+import { places } from "../data/places.mjs";
 
-document.addEventListener("DOMContentLoaded", () => {
-  
-  /* ------------------
-     LOAD GRID CONTENT
-  ------------------- */
-  const grid = document.getElementById("discoverGrid");
+// ----- Pintar las cards -----
+const grid = document.querySelector("#discover-grid");
 
-  places.forEach(place => {
-    const card = document.createElement("div");
-    card.classList.add("place-card", `area-${place.id}`);
+places.forEach((place, index) => {
+  const areaClass = `area-${String.fromCharCode(97 + index)}`; // a, b, c...
 
-    card.innerHTML = `
-      <h2>${place.title}</h2>
-      <figure>
-        <img src="${place.image}" alt="${place.title}">
-      </figure>
-      <address>${place.address}</address>
-      <p>${place.description}</p>
-      <button>Learn More</button>
-    `;
+  const card = document.createElement("article");
+  card.classList.add("place-card", areaClass);
 
-    grid.appendChild(card);
-  });
+  card.innerHTML = `
+    <h2>${place.name}</h2>
+    <figure>
+      <img src="${place.image}" alt="${place.name}">
+    </figure>
+    <address>${place.address}</address>
+    <p>${place.description}</p>
+    <button type="button">Learn more</button>
+  `;
 
-
-  /* ------------------
-     LAST VISIT MESSAGE
-  ------------------- */
-  const msg = document.getElementById("visitMessage");
-  const today = Date.now();
-  const lastVisit = Number(localStorage.getItem("lastVisit")) || 0;
-
-  if (!lastVisit) {
-    msg.textContent = "Welcome! Let us know if you have any questions.";
-  } else {
-    const diff = today - lastVisit;
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-    if (days < 1) {
-      msg.textContent = "Back so soon! Awesome!";
-    } else if (days === 1) {
-      msg.textContent = "You last visited 1 day ago.";
-    } else {
-      msg.textContent = `You last visited ${days} days ago.`;
-    }
-  }
-
-  localStorage.setItem("lastVisit", today);
+  grid.appendChild(card);
 });
+
+// ----- Mensaje de última visita -----
+const VISIT_KEY = "discover-last-visit";
+const visitEl = document.getElementById("visit-message");
+const now = Date.now();
+const lastVisit = Number(localStorage.getItem(VISIT_KEY));
+
+let message = "";
+
+if (!lastVisit) {
+  message = "Welcome! Let us know if you have any questions.";
+} else {
+  const diffMs = now - lastVisit;
+  const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+
+  if (days < 1) {
+    message = "Back so soon! Awesome!";
+  } else if (days === 1) {
+    message = "You last visited 1 day ago.";
+  } else {
+    message = `You last visited ${days} days ago.`;
+  }
+}
+
+visitEl.textContent = message;
+localStorage.setItem(VISIT_KEY, String(now));

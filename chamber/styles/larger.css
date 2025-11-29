@@ -99,4 +99,43 @@
     grid-template-columns: 1fr 300px;
     align-items: start;
   }
+
+  .discover-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e f"
+      "g h";
+  }
+
+  /* Efecto hover solo tablet/desktop */
+  .place-card img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .place-card img:hover {
+    transform: scale(1.03);
+    filter: brightness(1.05);
+  }
+}
+
+/* Large screens (1025px+) */
+@media screen and (min-width: 1025px) {
+  .discover-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "a a b c"
+      "d e f f"
+      "g h f f";
+  }
+
+  .place-card img {
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .place-card img:hover {
+    transform: scale(1.04);
+    filter: brightness(1.08);
+  }
 }
