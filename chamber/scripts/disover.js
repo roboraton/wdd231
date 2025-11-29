@@ -1,60 +1,51 @@
-import { places } from "../data/places.mjs";
+import { places } from "../data/discoverData.mjs";
 
-const grid = document.getElementById("discover-grid");
-const visitMessage = document.getElementById("visit-message");
+document.addEventListener("DOMContentLoaded", () => {
+  
+  /* ------------------
+     LOAD GRID CONTENT
+  ------------------- */
+  const grid = document.getElementById("discoverGrid");
 
-function renderPlaces() {
-  const areas = ["area-a", "area-b", "area-c", "area-d", "area-e", "area-f", "area-g", "area-h"];
-
-  places.forEach((place, index) => {
-    const card = document.createElement("article");
-    card.classList.add("place-card");
-
-    if (areas[index]) {
-      card.classList.add(areas[index]);
-    }
+  places.forEach(place => {
+    const card = document.createElement("div");
+    card.classList.add("place-card", `area-${place.id}`);
 
     card.innerHTML = `
       <h2>${place.title}</h2>
       <figure>
-        <img src="${place.image}" alt="${place.title}" loading="lazy">
+        <img src="${place.image}" alt="${place.title}">
       </figure>
       <address>${place.address}</address>
       <p>${place.description}</p>
-      <button type="button">Learn more</button>
+      <button>Learn More</button>
     `;
 
     grid.appendChild(card);
   });
-}
 
-function setVisitMessage() {
-  const STORAGE_KEY = "discover-last-visit";
-  const now = Date.now();
-  const lastVisit = Number(localStorage.getItem(STORAGE_KEY));
 
-  let message = "";
+  /* ------------------
+     LAST VISIT MESSAGE
+  ------------------- */
+  const msg = document.getElementById("visitMessage");
+  const today = Date.now();
+  const lastVisit = Number(localStorage.getItem("lastVisit")) || 0;
 
   if (!lastVisit) {
-    message = "Welcome! Let us know if you have any questions.";
+    msg.textContent = "Welcome! Let us know if you have any questions.";
   } else {
-    const diffMs = now - lastVisit;
-    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    const diff = today - lastVisit;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
 
-    if (diffDays < 1) {
-      message = "Back so soon! Awesome!";
-    } else if (diffDays === 1) {
-      message = "You last visited 1 day ago.";
+    if (days < 1) {
+      msg.textContent = "Back so soon! Awesome!";
+    } else if (days === 1) {
+      msg.textContent = "You last visited 1 day ago.";
     } else {
-      message = `You last visited ${diffDays} days ago.`;
+      msg.textContent = `You last visited ${days} days ago.`;
     }
   }
 
-  visitMessage.textContent = message;
-  localStorage.setItem(STORAGE_KEY, String(now));
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  renderPlaces();
-  setVisitMessage();
+  localStorage.setItem("lastVisit", today);
 });
