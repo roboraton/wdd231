@@ -2,7 +2,7 @@
 import { places } from "../data/places.mjs";
 
 // ----- Pintar las cards -----
-const grid = document.querySelector("#discover-grid");
+const grid = document.querySelector("#discoverGrid");
 
 places.forEach((place, index) => {
   const areaClass = `area-${String.fromCharCode(97 + index)}`; // a, b, c...
