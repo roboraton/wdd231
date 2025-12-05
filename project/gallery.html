@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>FROG - Sample Content</title>
+  <meta name="description" content="Sample items and concept content related to the FROG universe: gaming, anime, retro, and collectibles.">
+  <meta name="author" content="Hector Gomez" />
+  <meta name="keywords" content="FROG, Sample Content, Retro Gaming, Anime, Collectibles, Gallery">
+
+  <!-- Normalize + CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Righteous&display=swap" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="scripts/nav.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <h1>Sample Content</h1>
+</header>
+
+<nav>
+  <button id="menuButton">☰</button>
+  <ul id="navMenu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">What is FROG?</a></li>
+    <li><a href="gallery.html" class="active">Sample Content</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section>
+    <h2>Featured Items</h2>
+    <p>These are example items representing the FROG theme:</p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="images/sample1.jpg" alt="Retro gaming controller">
+        <h3>Retro Gaming</h3>
+        <p>Classic controllers and old-school hardware.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/sample2.jpg" alt="Anime figure">
+        <h3>Otaku Culture</h3>
+        <p>Figures, manga, and anime collectibles.</p>
+      </div>
+
+      <div class="card">
+        <img src="images/sample3.jpg" alt="Geek merchandise">
+        <h3>Friki Gear</h3>
+        <p>Geek-themed merchandise and accessories.</p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <div class="social">
+    <a href="https://github.com/roboraton/wdd231" target="_blank">
+      <img src="images/github.svg" alt="GitHub logo">
+    </a>
+    <a href="https://linkedin.com/in/inghigg" target="_blank">
+      <img src="images/linkedin.svg" alt="LinkedIn logo">
+    </a>
+    <a href="https://youtube.com/@roboraton" target="_blank">
+      <img src="images/youtube.svg" alt="YouTube logo">
+    </a>
+  </div>
+
+  <p>&copy; <span id="currentyear"></span> | Hector Gomez | Mexico</p>
+  <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+/* Desktop and Tablet (min 700px) */
+@media (min-width: 700px) {
+
+  /* Navigation becomes horizontal */
+  #menuButton {
+    display: none;
+  }
+
+  #navMenu {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  #navMenu li a {
+    border: none;
+    padding: 1rem 1.5rem;
+  }
+
+  /* Header spacing */
+  header {
+    padding: 2rem;
+  }
+
+  /* Center main content */
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  /* Gallery grid 3 columns */
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Better section spacing */
+  section {
+    padding: 1.5rem 2rem;
+  }
+  /* Hero text bigger & glowy */
+  .hero h2 {
+    font-size: 2rem;
+    text-shadow: 0 0 8px var(--primary), 0 0 14px var(--primary);
+  }
+
+  /* More spacing looks better in neon dark mode */
+  header {
+    box-shadow: 0 0 18px rgba(0,255,136,0.25);
+  }
+
+  /* Grid glow adjustment */
+  .grid {
+    gap: 1.5rem;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+  }
+}
+

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>FROG - Home</title>
+  <meta name="description" content="FROG — a site dedicated to geek culture, gaming, anime, and collectibles. Explore the FROG universe.">
+  <meta name="author" content="Hector Gomez" />
+  <meta name="keywords" content="FROG, Geek, Gaming, Anime, Collectibles, WDD231, BYU-Idaho">
+
+  <!-- Normalize + CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Righteous&display=swap" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="scripts/nav.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <h1>FROG</h1>
+  <p>Friki • Retro • Otaku • Gamer</p>
+</header>
+
+<nav>
+  <button id="menuButton">☰</button>
+  <ul id="navMenu">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">What is FROG?</a></li>
+    <li><a href="gallery.html">Sample Content</a></li>
+  </ul>
+</nav>
+
+<main>
+
+  <section class="hero">
+    <h2>Welcome to the FROG Universe</h2>
+    <p>A hub for fans of geek culture, gaming, anime and collectibles.</p>
+  </section>
+
+  <section class="intro">
+    <h3>Explore the Four Pillars</h3>
+    <ul>
+      <li><strong>Friki</strong> - general geek culture</li>
+      <li><strong>Retro</strong> - nostalgia gaming & classic media</li>
+      <li><strong>Otaku</strong> - anime, manga & Japanese culture</li>
+      <li><strong>Gamer</strong> - modern and classic gaming</li>
+    </ul>
+
+    <p>Learn more about how these four elements shape the FROG identity.</p>
+  </section>
+
+  <section class="cta">
+    <a class="button" href="about.html">Discover What FROG Is</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="social">
+    <a href="https://github.com/roboraton/wdd231" target="_blank">
+      <img src="images/github.svg" alt="GitHub logo">
+    </a>
+    <a href="https://linkedin.com/in/inghigg" target="_blank">
+      <img src="images/linkedin.svg" alt="LinkedIn logo">
+    </a>
+    <a href="https://youtube.com/@roboraton" target="_blank">
+      <img src="images/youtube.svg" alt="YouTube logo">
+    </a>
+  </div>
+
+  <p>&copy; <span id="currentyear"></span> | Hector Gomez | Mexico</p>
+  <p id="lastModified"></p>
+</footer>
+
+</body>
+</html>
