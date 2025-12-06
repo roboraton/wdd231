@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FROG – Form Results</title>
+  <title>FROG - Form Results</title>
 
   <meta name="description" content="Form submission results for the FROG WDD231 project.">
   <meta name="author" content="Hector Gomez" />
@@ -11,7 +11,7 @@
   <link rel="icon" href="images/favicon.png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="FROG – Form Results">
+  <meta property="og:title" content="FROG - Form Results">
   <meta property="og:description" content="Displays submitted user data.">
   <meta property="og:image" content="images/frog-og.jpg">
   <meta property="og:type" content="website">
@@ -23,6 +23,7 @@
 
   <!-- JS -->
   <script src="scripts/nav.js" defer></script>
+  <script src="scripts/form-results.js" defer></script>
 </head>
 
 <body>
@@ -62,12 +63,5 @@
     <p id="lastModified"></p>
   </footer>
 
-  <script>
-    // Extract GET params and insert into spans
-    const params = new URLSearchParams(location.search);
-    document.getElementById("name").textContent = params.get("name");
-    document.getElementById("email").textContent = params.get("email");
-    document.getElementById("category").textContent = params.get("category");
-  </script>
 </body>
 </html>

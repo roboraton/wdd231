@@ -1,4 +1,4 @@
-// ===== VIDEO: show modal behavior =====
+// ===== VIDEO MARKER: show modal usage =====
 
 export function openModal(item) {
   const modal = document.querySelector("#frogModal");
@@ -8,8 +8,6 @@ export function openModal(item) {
     <h2>${item.name}</h2>
     <img src="${item.image}" alt="${item.name}">
     <p>${item.description}</p>
-    <p><strong>Category:</strong> ${item.category}</p>
-    <p><strong>Price:</strong> ${item.price}</p>
   `;
 
   modal.showModal();

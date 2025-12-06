@@ -6,10 +6,7 @@
   --secondary: #1B2838;    /* gunmetal */
   --background: #050816;   /* rich black */
   --text: #F5F5F5;         /* white smoke */
-}
-
-* {
-    cursor: none;
+  --cursor-hover: #C400FF; /* neon purple */
 }
 
 /* ============================
@@ -22,12 +19,14 @@ body {
   color: var(--text);
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
+  cursor: none; /* laser activo por defecto */
 }
 
 h1, h2, h3 {
   font-family: "Righteous", cursive;
   color: var(--primary);
   margin-top: 0.5rem;
+  text-shadow: 0 0 6px var(--primary), 0 0 12px var(--primary);
 }
 
 section {
@@ -36,6 +35,9 @@ section {
   padding: 1rem;
   border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.15);
+  box-shadow:
+    0 0 10px rgba(0,255,136,0.08),
+    0 0 18px rgba(0,255,136,0.05);
 }
 
 p, li {
@@ -59,7 +61,7 @@ header {
 }
 
 /* ============================
-   Navigation (Hamburger)
+   Navigation
 ============================ */
 nav {
   background: var(--secondary);
@@ -100,17 +102,17 @@ nav {
 }
 
 /* ============================
-   Hero Section
+   Hero
 ============================ */
 .hero {
   text-align: center;
   padding: 1.5rem 1rem;
+  box-shadow: 0 6px 22px rgba(0,255,136,0.12);
 }
 
-.hero h2 {
-  margin-bottom: 0.5rem;
-}
-
+/* ============================
+   Buttons (generic)
+============================ */
 .button {
   display: inline-block;
   margin-top: 1rem;
@@ -118,8 +120,21 @@ nav {
   background: var(--primary);
   color: #000;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   border-radius: 6px;
+  box-shadow:
+    0 0 6px var(--primary),
+    0 0 12px var(--primary),
+    inset 0 0 4px rgba(255,255,255,0.3);
+  transition: transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 10px var(--primary),
+    0 0 18px var(--primary),
+    inset 0 0 6px rgba(255,255,255,0.4);
 }
 
 /* ============================
@@ -136,10 +151,54 @@ nav {
   padding: 1rem;
   border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.15);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 10px var(--primary),
+    0 0 16px var(--primary),
+    0 0 24px rgba(0,255,136,0.4);
 }
 
 .card h3 {
   margin-top: 0.8rem;
+}
+
+/* ============================
+   DETAILS BUTTON + GLITCH
+============================ */
+.details-btn {
+  margin-top: 0.6rem;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  border-radius: 6px;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.details-btn:hover {
+  background: var(--primary);
+  color: #000;
+}
+
+/* ---- GLITCH EFFECT ---- */
+@keyframes glitchHover {
+  0%   { transform: translate(0); filter: none; }
+  20%  { transform: translate(-2px, 1px); filter: hue-rotate(20deg); }
+  40%  { transform: translate(2px, -1px); filter: hue-rotate(-20deg); }
+  60%  { transform: translate(-1px, 2px); }
+  80%  { transform: translate(1px, -2px); }
+  100% { transform: translate(0); filter: none; }
+}
+
+.details-btn:hover {
+  animation: glitchHover 0.25s linear;
 }
 
 /* ============================
@@ -157,74 +216,7 @@ footer {
   width: 32px;
   margin: 0 0.3rem;
   filter: invert(100%);
-}
-
-#lastModified {
-  font-size: 0.9rem;
-  color: var(--primary);
-}
-
-/* ==========================================
-   ✨ FROG Neon Glow Enhancements ✨
-========================================== */
-
-/* Titles glow softly */
-h1, h2 {
-  text-shadow: 0 0 6px var(--primary), 0 0 12px var(--primary);
-}
-
-/* Neon button */
-.button {
-  background: var(--primary);
-  color: #000;
-  border-radius: 6px;
-  padding: 0.7rem 1.2rem;
-  font-weight: 700;
-
-  box-shadow:
-    0 0 6px var(--primary),
-    0 0 12px var(--primary),
-    inset 0 0 4px rgba(255, 255, 255, 0.3);
-
-  transition: transform 0.2s ease, box-shadow 0.25s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 0 10px var(--primary),
-    0 0 18px var(--primary),
-    inset 0 0 6px rgba(255, 255, 255, 0.4);
-}
-
-/* Section glow edge (very subtle) */
-section {
-  box-shadow:
-    0 0 10px rgba(0, 255, 136, 0.08),
-    0 0 18px rgba(0, 255, 136, 0.05);
-}
-
-/* Cards get neon on hover */
-.card {
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow:
-    0 0 10px var(--primary),
-    0 0 16px var(--primary),
-    0 0 24px rgba(0,255,136,0.4);
-}
-
-/* Hero section subtle glow at the bottom */
-.hero {
-  box-shadow: 0 6px 22px rgba(0, 255, 136, 0.12);
-}
-
-/* Neon outline for social icons on hover */
-.social img {
-  transition: filter 0.2s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 .social img:hover {
@@ -234,71 +226,42 @@ section {
     0 0 16px var(--primary);
 }
 
-/* ==========================================
-   ✨ FROG Neon Laser Cursor
-========================================== */
-body {
-  cursor: none;
+#lastModified {
+  font-size: 0.9rem;
+  color: var(--primary);
 }
 
-/* Fake cursor */
+/* ============================
+   FROG Neon Laser Cursor
+============================ */
 .frog-cursor {
   position: fixed;
+  top: 0;
+  left: 0;
   width: 14px;
   height: 14px;
-  background: var(--primary);
   border-radius: 50%;
+  background: var(--primary);
   pointer-events: none;
-  box-shadow:
-      0 0 6px var(--primary),
-      0 0 12px var(--primary),
-      0 0 18px rgba(0,255,136,0.8);
   transform: translate(-50%, -50%);
   z-index: 9999;
-}
-
-/* ==========================================
-   ✨ FROG Neon Cursor — Pulse Animation
-========================================== */
-
-.frog-cursor {
+  box-shadow:
+    0 0 6px var(--primary),
+    0 0 12px var(--primary),
+    0 0 18px rgba(0,255,136,0.8);
   animation: frogPulse 1.2s ease-in-out infinite;
 }
 
 @keyframes frogPulse {
-  0% {
+  0%, 100% {
     transform: translate(-50%, -50%) scale(1);
-    box-shadow:
-      0 0 6px var(--primary),
-      0 0 12px var(--primary),
-      0 0 18px rgba(0,255,136,0.8);
   }
-
   50% {
     transform: translate(-50%, -50%) scale(1.25);
-    box-shadow:
-      0 0 10px var(--primary),
-      0 0 20px var(--primary),
-      0 0 28px rgba(0,255,136,1);
-  }
-
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    box-shadow:
-      0 0 6px var(--primary),
-      0 0 12px var(--primary),
-      0 0 18px rgba(0,255,136,0.8);
   }
 }
-/* ==========================================
-   ✨ Cursor color change on hover
-========================================== */
 
-:root {
-  --cursor-hover: #C400FF; /* neon purple */
-}
-
-/* When JS adds .cursor-hover to <body> */
+/* cursor color change on hover elements */
 body.cursor-hover .frog-cursor {
   background: var(--cursor-hover);
   box-shadow:
@@ -307,46 +270,26 @@ body.cursor-hover .frog-cursor {
     0 0 20px var(--cursor-hover);
 }
 
+/* ============================
+   MODAL
+============================ */
+dialog,
+dialog * {
+  cursor: auto; /* cursor visible dentro del modal */
+}
+
 dialog#frogModal {
-  background: #0a0a0f; /* mismo rich black pero 2 tonos arriba */
-  border: 2px solid #00ff88;
+  background: #0a0a0f;
+  border: 2px solid var(--primary);
   border-radius: 12px;
   padding: 1.5rem;
-  color: #f5f5f5;
+  color: var(--text);
   box-shadow: 0 0 20px rgba(0,255,136,0.4);
+  animation: glitchIn 0.35s ease-out;
 }
 
 dialog::backdrop {
-  background: rgba(0, 0, 0, 0.7);
-}
-
-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999999999; /* encima de TODO, incluso dialog */
-  pointer-events: none; /* para no bloquear clicks */
-}
-
-#closeModal {
-  cursor: none; /* mantener tu laser */
-  padding: 0.5rem 1rem;
-  background: transparent;
-  border: 2px solid #00ff88;
-  border-radius: 6px;
-  color: #00ff88;
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-#closeModal:hover {
-  background: #00ff88;
-  color: #0a0a0f;
-}
-
-dialog#frogModal {
-  animation: glitchIn 0.4s ease-out;
+  background: rgba(0,0,0,0.7);
 }
 
 @keyframes glitchIn {
@@ -361,7 +304,7 @@ dialog#frogModal {
   }
   70% {
     transform: scale(0.98) skewX(2deg);
-    filter: hue-rotate(0deg) blur(1px);
+    filter: blur(1px);
   }
   100% {
     transform: scale(1);
@@ -369,3 +312,27 @@ dialog#frogModal {
   }
 }
 
+.attributions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.attributions li {
+  margin: 0.6rem 0;
+}
+
+.attributions li a {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background: rgba(0, 255, 136, 0.15);
+  color: var(--primary);
+  text-decoration: none; /* ✨ adiós subrayado */
+  border-radius: 999px; /* pill */
+  border: 1px solid rgba(0, 255, 136, 0.4);
+  transition: 0.2s ease;
+}
+
+.attributions li a:hover {
+  background: var(--primary);
+  color: #000;
+}

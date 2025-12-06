@@ -11,7 +11,6 @@ menuButton?.addEventListener("click", () => {
 // =====================
 // Date Footer
 // =====================
-// (you could also keep this in date.js, but leaving here is fine)
 
 const yearSpan = document.querySelector("#currentyear");
 if (yearSpan) yearSpan.textContent = new Date().getFullYear();

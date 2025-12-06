@@ -32,6 +32,7 @@
   <!-- Scripts -->
   <script src="scripts/nav.js" defer></script>
   <script src="scripts/date.js" defer></script>
+  <script type="module" src="scripts/gallery-main.js"></script>
 </head>
 
 <body>
@@ -82,15 +83,6 @@
   </dialog>
 
 </main>
-
-<!-- Module Scripts -->
-<script type="module">
-  import { renderGallery } from "./scripts/render-gallery.js";
-  import { initModal } from "./scripts/modal.js";
-
-  renderGallery();   // loads JSON, generates cards (15+ items)
-  initModal();       // activates modal functionality
-</script>
 
 <footer>
   <div class="social">
