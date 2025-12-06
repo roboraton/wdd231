@@ -26,58 +26,75 @@
 </head>
 
 <body>
-  <header>
-    <h1>FROG Form</h1>
-  </header>
 
-  <nav>
-    <button id="menuButton">☰</button>
-    <ul id="navMenu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="form.html" class="active">Form</a></li>
-      <li><a href="attributions.html">Attributions</a></li>
-    </ul>
-  </nav>
+<header>
+  <h1>FROG Form</h1>
+</header>
 
-  <main>
-    <section>
-      <h2>User Information Form</h2>
+<nav>
+  <button id="menuButton">☰</button>
+  <ul id="navMenu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="form.html" class="active">Form</a></li>
+    <li><a href="attributions.html">Attributions</a></li>
+  </ul>
+</nav>
 
-      <!-- Required HTML Form -->
-      <form action="form-action.html" method="GET">
-        <label>Name:
-          <input type="text" name="name" required>
-        </label>
+<main>
+  <section>
+    <h2>User Information Form</h2>
 
-        <label>Email:
-          <input type="email" name="email" required>
-        </label>
+    <form action="form-action.html" method="GET">
 
-        <label>Favorite Category:
-          <select name="category" required>
-            <option value="Friki">Friki</option>
-            <option value="Retro">Retro</option>
-            <option value="Otaku">Otaku</option>
-            <option value="Gamer">Gamer</option>
-          </select>
-        </label>
+      <label for="name">
+        Name:
+        <input type="text" id="name" name="name" required>
+      </label>
 
-        <button type="submit" class="button">Submit</button>
-      </form>
-    </section>
-  </main>
+      <label for="email">
+        Email:
+        <input type="email" id="email" name="email" required>
+      </label>
 
-  <footer>
-    <div class="social">
-      <a href="https://github.com/roboraton" target="_blank"><img src="images/github.svg" alt="GitHub"></a>
-      <a href="https://linkedin.com/in/inghigg" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a>
-      <a href="https://youtube.com/@roboraton" target="_blank"><img src="images/youtube.svg" alt="YouTube"></a>
-    </div>
+      <label for="category">
+        Choose your FROG vibe 🐸
+        <select id="category" name="category" required>
+          <option value="">-- Pick your favorite world --</option>
+          <option value="Friki">🤓 Friki — Geek culture & fandoms</option>
+          <option value="Retro">🕹️ Retro — Classic games & nostalgia</option>
+          <option value="Otaku">🎌 Otaku — Anime & manga universe</option>
+          <option value="Gamer">🎮 Gamer — Modern & hardcore gaming</option>
+        </select>
+      </label>
 
-    <p>&copy; <span id="currentyear"></span> | Hector Gomez | Mexico</p>
-    <p id="lastModified"></p>
-  </footer>
+      <p class="form-help">
+        This helps us understand what kind of FROG content you enjoy the most.
+      </p>
+
+      <button type="submit" class="button">Submit</button>
+
+    </form>
+  </section>
+</main>
+
+<footer>
+  <div class="social">
+    <a href="https://github.com/roboraton" target="_blank">
+      <img src="images/github.svg" alt="GitHub">
+    </a>
+    <a href="https://linkedin.com/in/inghigg" target="_blank">
+      <img src="images/linkedin.svg" alt="LinkedIn">
+    </a>
+    <a href="https://youtube.com/@roboraton" target="_blank">
+      <img src="images/youtube.svg" alt="YouTube">
+    </a>
+  </div>
+
+  <p>&copy; <span id="currentyear"></span> | Hector Gomez | Mexico</p>
+  <p id="lastModified"></p>
+</footer>
+
 </body>
 </html>
