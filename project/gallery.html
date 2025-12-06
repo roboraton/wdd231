@@ -5,9 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>FROG - Sample Content</title>
-  <meta name="description" content="Sample items and concept content related to the FROG universe: gaming, anime, retro, and collectibles.">
+  <meta name="description" content="Dynamic gallery of sample items related to the FROG universe: gaming, anime, retro, and collectibles. Powered by JSON and JavaScript.">
   <meta name="author" content="Hector Gomez" />
   <meta name="keywords" content="FROG, Sample Content, Retro Gaming, Anime, Collectibles, Gallery">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FROG — Dynamic Sample Gallery">
+  <meta property="og:description" content="A dynamically generated gallery of geek, anime, retro and gaming items.">
+  <meta property="og:image" content="images/frog-og.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="#">
 
   <!-- Normalize + CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
@@ -36,38 +46,51 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">What is FROG?</a></li>
     <li><a href="gallery.html" class="active">Sample Content</a></li>
+    <li><a href="form.html">Form</a></li>
+    <li><a href="attributions.html">Attributions</a></li>
   </ul>
 </nav>
 
 <main>
 
+  <!-- Intro Section -->
   <section>
-    <h2>Featured Items</h2>
-    <p>These are example items representing the FROG theme:</p>
-
-    <div class="grid">
-      <div class="card">
-        <img src="images/sample1.jpg" alt="Retro gaming controller">
-        <h3>Retro Gaming</h3>
-        <p>Classic controllers and old-school hardware.</p>
-      </div>
-
-      <div class="card">
-        <img src="images/sample2.jpg" alt="Anime figure">
-        <h3>Otaku Culture</h3>
-        <p>Figures, manga, and anime collectibles.</p>
-      </div>
-
-      <div class="card">
-        <img src="images/sample3.jpg" alt="Geek merchandise">
-        <h3>Friki Gear</h3>
-        <p>Geek-themed merchandise and accessories.</p>
-      </div>
-    </div>
-
+    <h2>Dynamic Gallery</h2>
+    <p>
+      This gallery is generated from a local JSON file using ES Modules.
+      Each item includes multiple properties and supports modal details and user favorites via localStorage.
+    </p>
   </section>
 
+  <!-- Gallery -->
+  <section>
+    <!-- VIDEO MARKER: Demonstrate fetch, async/await, try/catch, dynamic generation -->
+    <div class="grid" id="frogGallery"></div>
+  </section>
+
+  <!-- Modal -->
+  <dialog 
+    id="frogModal" 
+    aria-modal="true" 
+    role="dialog" 
+    aria-labelledby="modalTitle">
+    
+    <!-- VIDEO MARKER: Demonstrate modal interactions -->
+    <div id="modalContent"></div>
+
+    <button id="closeModal" class="button">Close</button>
+  </dialog>
+
 </main>
+
+<!-- Module Scripts -->
+<script type="module">
+  import { renderGallery } from "./scripts/render-gallery.js";
+  import { initModal } from "./scripts/modal.js";
+
+  renderGallery();   // loads JSON, generates cards (15+ items)
+  initModal();       // activates modal functionality
+</script>
 
 <footer>
   <div class="social">

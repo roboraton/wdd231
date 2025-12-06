@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FROG – Form Results</title>
+
+  <meta name="description" content="Form submission results for the FROG WDD231 project.">
+  <meta name="author" content="Hector Gomez" />
+
+  <link rel="icon" href="images/favicon.png">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FROG – Form Results">
+  <meta property="og:description" content="Displays submitted user data.">
+  <meta property="og:image" content="images/frog-og.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- JS -->
+  <script src="scripts/nav.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Form Submission Results</h1>
+  </header>
+
+  <nav>
+    <button id="menuButton">☰</button>
+    <ul id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="form.html">Form</a></li>
+      <li><a href="attributions.html">Attributions</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Your Submitted Information</h2>
+
+      <p><strong>Name:</strong> <span id="name"></span></p>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <p><strong>Favorite Category:</strong> <span id="category"></span></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="social">
+      <a href="https://github.com/roboraton" target="_blank"><img src="images/github.svg" alt="GitHub"></a>
+      <a href="https://linkedin.com/in/inghigg" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+      <a href="https://youtube.com/@roboraton" target="_blank"><img src="images/youtube.svg" alt="YouTube"></a>
+    </div>
+
+    <p>&copy; <span id="currentyear"></span> | Hector Gomez | Mexico</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    // Extract GET params and insert into spans
+    const params = new URLSearchParams(location.search);
+    document.getElementById("name").textContent = params.get("name");
+    document.getElementById("email").textContent = params.get("email");
+    document.getElementById("category").textContent = params.get("category");
+  </script>
+</body>
+</html>

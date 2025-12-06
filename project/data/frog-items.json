@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Retro Controller",
+    "category": "Retro",
+    "image": "images/sample1.jpg",
+    "price": "$25",
+    "description": "Classic 90s gaming controller with a nostalgic design."
+  },
+  {
+    "id": 2,
+    "name": "Anime PVC Figure",
+    "category": "Otaku",
+    "image": "images/sample2.jpg",
+    "price": "$42",
+    "description": "High-quality anime collectible with detailed paintwork."
+  },
+  {
+    "id": 3,
+    "name": "Geek Mug",
+    "category": "Friki",
+    "image": "images/sample3.jpg",
+    "price": "$15",
+    "description": "Ceramic mug featuring retro pixel art."
+  },
+  {
+    "id": 4,
+    "name": "LED Gaming Keyboard",
+    "category": "Gamer",
+    "image": "images/sample4.jpg",
+    "price": "$55",
+    "description": "Neon RGB mechanical keyboard perfect for gaming setups."
+  },
+  {
+    "id": 5,
+    "name": "Retro Cartridge",
+    "category": "Retro",
+    "image": "images/sample5.jpg",
+    "price": "$30",
+    "description": "Physical game cartridge from the golden age of consoles."
+  },
+  {
+    "id": 6,
+    "name": "Anime Poster",
+    "category": "Otaku",
+    "image": "images/sample6.jpg",
+    "price": "$12",
+    "description": "Glossy poster of a popular shonen character."
+  },
+  {
+    "id": 7,
+    "name": "Geek Sticker Pack",
+    "category": "Friki",
+    "image": "images/sample7.jpg",
+    "price": "$8",
+    "description": "Set of waterproof stickers featuring pixel art designs."
+  },
+  {
+    "id": 8,
+    "name": "Arcade Joystick",
+    "category": "Retro",
+    "image": "images/sample8.jpg",
+    "price": "$60",
+    "description": "Professional joystick designed for classic arcade gameplay."
+  },
+  {
+    "id": 9,
+    "name": "Neko Plush",
+    "category": "Otaku",
+    "image": "images/sample9.jpg",
+    "price": "$28",
+    "description": "Soft plush inspired by cat-themed anime mascots."
+  },
+  {
+    "id": 10,
+    "name": "RGB Gaming Mouse",
+    "category": "Gamer",
+    "image": "images/sample10.jpg",
+    "price": "$38",
+    "description": "Adjustable DPI mouse with customizable LED lighting."
+  },
+  {
+    "id": 11,
+    "name": "Pixel Art Board",
+    "category": "Friki",
+    "image": "images/sample11.jpg",
+    "price": "$18",
+    "description": "DIY beadboard kit to create pixel art characters."
+  },
+  {
+    "id": 12,
+    "name": "Otaku Keychain",
+    "category": "Otaku",
+    "image": "images/sample12.jpg",
+    "price": "$10",
+    "description": "High-quality acrylic keychain featuring anime chibi art."
+  },
+  {
+    "id": 13,
+    "name": "Retro Console Mini",
+    "category": "Retro",
+    "image": "images/sample13.jpg",
+    "price": "$75",
+    "description": "Miniature console with preloaded classic games."
+  },
+  {
+    "id": 14,
+    "name": "Gaming Headset",
+    "category": "Gamer",
+    "image": "images/sample14.jpg",
+    "price": "$49",
+    "description": "Surround-sound headset ideal for immersive gaming."
+  },
+  {
+    "id": 15,
+    "name": "FROG Neon Sticker",
+    "category": "Friki",
+    "image": "images/sample15.jpg",
+    "price": "$5",
+    "description": "Neon green FROG brand sticker with glowing edges."
+  }
+]
